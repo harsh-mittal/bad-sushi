@@ -3,5 +3,11 @@ package main
 import "log"
 
 func main() {
-	log.Printf("Running.")
+	_, err := LoadTcpConfig()
+	if err != nil {
+		log.Printf("Failed")
+		return
+	}
+
+	log.Printf("Success")
 }
